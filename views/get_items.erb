@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Read Items</title>
+</head>
+<body>
+<h1>Hello World</h1>
+  <table border = "1">
+    <thead>
+      <th><b>Name</b></th>
+      <th><b>Value</b></th>
+    </thead>
+    <% @items.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.value %></td>
+    </tr>
+    <% end %>
+  </table>
+  <br>
+  <br>
+  <a href="/">CREATE</a> | READ
+</body>
+<br>
+<br>
+<footer>
+<small>&copy; Copyright 2021, TNEDO, Inc.</small>
+</footer>
+</html>

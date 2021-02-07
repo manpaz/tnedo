@@ -1,0 +1,28 @@
+version: "2"
+services:
+  hello:
+    image: tnedo/hello
+    working_dir: /var/www
+    depends_on:
+      - postgres
+      - migrations
+    env_file:
+      - ./env-dev
+    ports:
+      - 80:4567
+  migrations:
+    build: ./
+    image: tnedo/hello
+    working_dir: /var/www
+    depends_on:
+      - postgres
+    env_file:
+      - ./env-dev
+    command: bash -c "rake db:migrate && rake db:seed"
+  postgres:
+    image: postgres:12.5
+    ports:
+      - 5432:5432
+    env_file:
+      - ./env-dev
+

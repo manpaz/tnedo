@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Items</title>
+</head>
+<body>
+<h1>Hello World</h1>
+<form action="/create" method="POST">
+  <input type="text" name="item[name]" value="Enter Item Name"
+    onfocus="if(this.value==this.defaultValue)this.value=''"    
+    onblur="if(this.value=='')this.value=this.defaultValue" />
+  <input type="text" name="item[value]" value="Enter Item Value"
+    onfocus="if(this.value==this.defaultValue)this.value=''"    
+    onblur="if(this.value=='')this.value=this.defaultValue" />
+  <input type="submit" value="Submit" />
+</form>
+<br>
+<br>
+CREATE | <a href="/read">READ</a>
+</body>
+<br>
+<br>
+<footer>
+<small>&copy; Copyright 2021, TNEDO, Inc.</small>
+</footer>
+</html>
+
+
